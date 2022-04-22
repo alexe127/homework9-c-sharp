@@ -19,5 +19,4 @@ void Fibo(int a, int b, int n)
 int A = 3;
 int B = 4;
 int N = 5;
-
 Fibo(A, B, N);
