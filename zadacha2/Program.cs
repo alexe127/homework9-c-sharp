@@ -19,3 +19,4 @@ void Recurs(int n)
 
 Recurs(b);
 Console.WriteLine($"{a}  в степени {b} =  {result}");
+
