@@ -15,8 +15,10 @@ void Fibo(int a, int b, int n)
         Fibo(a, b, n);
     }
 }
-
-int A = 3;
-int B = 4;
-int N = 5;
-Fibo(A, B, N);
+Console.Write("Введите число 1: ");
+int firstElement = int.Parse(Console.ReadLine() ?? "0");
+Console.Write("Введите число 2: ");
+int secondElement = int.Parse(Console.ReadLine() ?? "0");
+Console.Write("Введите количество элементов: ");
+int N = int.Parse(Console.ReadLine() ?? "0");
+Fibo(firstElement, secondElement, N);
