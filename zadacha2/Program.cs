@@ -1,22 +1,17 @@
 ﻿// Написать программу возведения числа А в целую степень B.
 
-// Console.WriteLine("Введите число: ");
-// int a = int.Parse(Console.ReadLine() ?? "");
-// Console.WriteLine("Введите число: ");
-// int b = int.Parse(Console.ReadLine() ?? "");
-
-Random rnd = new Random();
-int a = rnd.Next(1,10);
-int b = rnd.Next(1,5);
-int result = 1;
-
-void Recurs(int n)
+int Exponentiation(int a, int b)
 {
-    if (n == 0) return;
-    result *= a;
-    Recurs(n - 1);
+    if (a < 0 || b < 0)
+    {
+        Console.WriteLine("введите числа >= 0");
+        return -1;
+    }
+    if (b == 0) return 1;
+    return a * Exponentiation(a, b - 1);
 }
-
-Recurs(b);
-Console.WriteLine($"{a}  в степени {b} =  {result}");
-
+Console.Write("Введите число а: ");
+int a = int.Parse(Console.ReadLine() ?? "0");
+Console.Write("Введите целую степень b: ");
+int b = int.Parse(Console.ReadLine() ?? "0");
+Console.WriteLine($"{a} в степени {b} = {Exponentiation(a, b)}");
